@@ -7,6 +7,97 @@ html {
 }
 
 body {
-  margin: 0;
+  margin-left: 5px;
+  margin-bottom: 25px;
   min-height: 100%;
+}
+
+#navbar {
+  position: fixed;
+  border: solid;
+}
+
+#main-doc {
+  margin-left: 250px;
+  max-width: 70%;
+}
+
+.main-section {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.nav-item {
+  margin-right: 41px;
+  margin-bottom: 30px;
+  margin-top: 25px;
+}
+
+#basic_selectors {
+}
+
+#grouping_selectors {
+}
+
+#combinators {
+}
+
+#pseudo {
+}
+
+#specifications {
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: blue;
+    text-decoration: none;
+  }
+}
+
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+
+p {
+  line-height: 20px;
+}
+
+.header-section {
+  font-size: 20px;
+  font-weight: 550;
+  color: rgb(64, 64, 209);
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+h4 {
+  margin-bottom: -6px;
+  margin-top: 30px;
+}
+
+.nav-ul {
+  list-style: none;
+}
+
+.nav-header {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(59, 108, 243);
+}
+
+#spec-li {
+  line-height: 20px;
+}
+
+.title {
+  margin-bottom: 50px;
 }

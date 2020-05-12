@@ -8,6 +8,106 @@
     <link rel="stylesheet" href="/screen.css" />
   </head>
   <body>
-    <h1 class="hello-world">Hello, World!</h1>
+    <nav id="navbar">
+      <header class="nav-header">On this Page</header>
+      <ul class="nav-ul">
+        <li class="nav-item">
+          <a href="#basic_selectors" class="nav-link">Basic Selectors</a>
+        </li>
+        <li class="nav-item">
+          <a href="#grouping_selectors" class="nav-link">Grouping Selectors</a>
+        </li>
+        <li class="nav-item">
+          <a href="#combinators" class="nav-link">Combinators</a>
+        </li>
+        <li class="nav-item">
+          <a href="#pseudo" class="nav-link">Pseudo</a>
+        </li>
+        <li class="nav-item">
+          <a href="#specifications" class="nav-link">Specifications</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <h1 class="title">CSS Selectors</h1>
+      <section class="main-section" id="basic_selectors">
+        <header class="header-section">Basic Selectors</header>
+        <h4>Universal Selector</h4>
+        <p>Selects all elements. Optionally, it may be restricted to a specific namespace or to all namespaces.
+          <strong>Syntax:</strong> <code>* ns|* *|*</code>
+          <strong>Example:</strong> <code>*</code> will match all the elements of the document.</p>
+        <h4>Type Selector</h4>
+        <p>Selects all elements that have the given node name.
+          <strong>Syntax:</strong> <code>elementname</code>
+          <strong>Example:</strong> <code>input</code> will match any<code>&lt;input&gt;</code>element.</p>
+        <h4>Class Selector</h4>
+        <p>Selects all elements that have the given <code>class</code> attribute.
+          <strong>Syntax:</strong> <code>.classname</code>
+          <strong>Example:</strong> <code>.index</code> will match any element that has a class of "index".</p>
+        <h4>ID Selector</h4>
+        <p>Selects an element based on the value of its <codeid></code> attribute. There should be only one element with a given ID in a document.
+          <strong>Syntax:</strong> <code>#idname</code>
+          <strong>Example:</strong> <code>#toc</code> will match the element that has the ID "toc".</p>
+        <h4>Attribute Selector</h4>
+        <p>Selects all elements that have the given attribute.
+          <strong>Syntax:</strong> <code>[attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]</code>
+          <strong>Example:</strong> <code>[autoplay]</code> will match all elements that have the <code>autoplay</code> attribute set (to any value).</p>
+      </section>
+      <section class="main-section" id="grouping_selectors">
+        <header class="header-section">Grouping Selectors</header>
+        <h4>Selector List</h4>
+        <p>The <code>,</code> is a grouping method, it selects all the matching nodes.
+          <strong>Syntax:</strong> <code>A, B</code>
+          <strong>Example:</strong> <code>div, span</code> will match both <code>&lt;span&gt;</code> and <code>&lt;div&gt;</code> elements.</p>
+      </section>
+      <section class="main-section" id="combinators">
+        <header class="header-section">Combinators</header>
+        <h4>Descendent Combinator</h4>
+        <p>The <code>  </code> (space) combinator selects nodes that are descendants of the first element.
+          <strong>Syntax:</strong> <code>A B</code>
+          <strong>Example:</strong> <code>div span</code> will match all <code>&lt;span&gt;</code> elements that are inside a <code>&lt;div&gt;</code> element.</p>
+        <h4>Child Combinator</h4>
+        <p>The <code>></code> combinator selects nodes that are direct children of the first element.
+          <strong>Syntax:</strong> <code>A > B</code>
+          <strong>Example:</strong> <code>ul > li</code> will match all <code>&lt;li&gt;</code> elements that are nested directly inside a <code>&lt;ul&gt;</code> element.</p>
+        <h4>General Sibling Combinator</h4>
+        <p>The <code>~</code> combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.
+          <strong>Syntax:</strong> <code>A ~ B</code>
+          <strong>Example:</strong> <code>p ~ span</code> will match all <code>&lt;span&gt;</code> elements that follow a <code>&lt;p&gt;</code>, immediately or not.</p>
+        <h4>Adjacent Sibling Combinator</h4>
+        <p>The <code>+</code> combinator selects adjacent siblings. This means that the second element directly follows the first, and both share the same parent.
+          <strong>Syntax:</strong> <code>A + B</code>
+          <strong>Example:</strong> <code>h2 + p</code> will match all <code>&lt;p&gt;</code> elements that directly follow an <code>&lt;h2&gt;</code>.</p>
+        <h4>Column Combinator</h4>
+        <p>The <code>||</code> combinator selects nodes which belong to a column.
+          <strong>Syntax:</strong> <code>A || B</code>
+          <strong>Example:</strong> <code>col || td</code> will match all <code>&lt;td&gt;</code> elements that belong to the scope of the <code>&lt;col&gt;</code>.</p>
+      </section>
+      <section class="main-section" id="pseudo">
+        <header class="header-section">Pseudo</header>
+        <h4>Pseudo Classes</h4>
+        <p>The <code>:</code> pseudo allow the selection of elements based on state information that is not contained in the document tree.
+          <strong>Example:</strong> <code>a:visited</code> will match all <code>&lt;a&gt;</code> elements that have been visited by the user.</p>
+        <h4>Pseudo Elements</h4>
+        <p>The <code>::</code> pseudo represent entities that are not included in HTML.
+          <strong>Example:</strong> <code>p::first-line</code> will match the first line of all <code>&lt;p&gt;</code> elements.</p>
+      </section>
+      <section class="main-section" id="specifications">
+        <header class="header-section">Specifications</header>
+        <ul class="spec_li">
+          <li>Selectors Level 4</li>
+          <li>Selectors Level 3</li>
+          <li>CSS Level 2</li>
+          <li>CSS Level 1</li>
+          <li style="display: none;"></li>
+        </ul>
+      </section>
+      <section>
+        <header class="header-section">Info Source</header>
+        <h4><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS Selectors</a></h4>
+      </section>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
